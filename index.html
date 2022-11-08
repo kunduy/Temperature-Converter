@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+         crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="temp.js">
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    
+    <div class="con">
+        
+        <div class="from box">
+            <span>From</span>
+            <select name="mylist" id="mylist" onchange="TempType()">
+                <option value="">--Choose type</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select><br>
+            Input:
+            <input id="in" type="text" onchange="Inputvalue()">
+        </div>
+        <div class="to box">
+            <span>To</span>
+            <select name="mylist1" id="mylist1" onsubmit="Convert() ">
+                <option value="">--Choose type</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <br>
+            <button type="submit" onclick="Convert()">Submit</button><br>
+            Output:
+            <input id="output" type="text">
+
+        </div>
+
+    </div>
+    <script src="./temp.js"></script>
+</body>
+</html>
